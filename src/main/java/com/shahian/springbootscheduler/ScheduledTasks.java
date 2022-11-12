@@ -30,7 +30,7 @@ public class ScheduledTasks {
         String to = "hamidreza.shahian@gmail.com";
 
         // Sender's email ID needs to be mentioned
-        String from = "uspalangirani.shahian@gmail.com";
+        String from = "uspalangirani@gmail.com";
 
         // Assuming you are sending email from through gmails smtp
         String host = "smtp.gmail.com";
@@ -69,7 +69,7 @@ public class ScheduledTasks {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("This is the Subject!");
 
             // Now set the actual message
             message.setText("This is a test  message with schedule ");
@@ -94,7 +94,7 @@ public class ScheduledTasks {
                 + dateFormat.format(new Date()));
 
     }
-    //another example 
+    //another example
     @Scheduled(cron = "*/5 * * * * *")
     public void performTaskUsingCron() {
 
