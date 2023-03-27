@@ -47,11 +47,11 @@ Each field in the expression corresponds to a particular time element, as follow
 ```
 We can also use special characters in a cron expression to specify more complex schedules. For example:
 
-* - indicates all possible values for a field</br>
-/ - specifies increments</br>
-, - specifies a list of values</br>
-- - specifies a range of values</br>
-? - specifies no specific value</br>
+1. * - indicates all possible values for a field</br>
+2. / - specifies increments</br>
+3. , - specifies a list of values</br>
+4. - - specifies a range of values</br>
+5. ? - specifies no specific value</br>
 
 Here is an example of a cron expression that runs a script every 10 minutes during business hours on weekdays:
 ```
