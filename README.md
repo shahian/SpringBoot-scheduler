@@ -25,6 +25,8 @@ public class MyService {
     }
 }
 ```
+In the above example, we have specified a cron expression that will execute the runTask() method every day at 12:00 PM.
 
+Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
 
 
