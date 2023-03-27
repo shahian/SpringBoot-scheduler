@@ -27,6 +27,22 @@ public class MyService {
 ```
 In the above example, we have specified a cron expression that will execute the runTask() method every day at 12:00 PM.
 
-Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
+Cron is a Unix utility that allows you to schedule tasks to run periodically at specific times or intervals. A cron expression is a string that consists of six or seven fields, separated by whitespace, that define a schedule for running a command or script.
 
+Here is an example of a cron expression:
+```
+* * * * * *
+```
+Each field in the expression corresponds to a particular time element, as follows:
+
+Minutes (0-59)
+Hours (0-23)
+Day of the month (1-31)
+Month (1-12)
+Day of the week (0-6, where 0 = Sunday)
+The sixth and optional seventh field specifies the year. For example, the following expression runs a script every day at 1:30 AM:
+Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
+```
+30 1 * * *
+```
 
