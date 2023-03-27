@@ -16,7 +16,14 @@ In the above example, we have annotated the runTask() method with @Scheduled(fix
 
 We can also use a cron expression to specify a more complex scheduling pattern. For example:
 ```
-
+@Service
+public class MyService {
+    
+    @Scheduled(cron = "0 0 12 * * ?")
+    public void runTask() {
+        // code to be executed every day at 12:00 PM
+    }
+}
 ```
 
 
