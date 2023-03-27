@@ -41,8 +41,25 @@ Each field in the expression corresponds to a particular time element, as follow
 4. Month (1-12)
 5. Day of the week (0-6, where 0 = Sunday)
 6. The sixth and optional seventh field specifies the year. For example, the following expression runs a script every day at 1:30 AM:
-Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
+
 ```
 30 1 * * *
 ```
+We can also use special characters in a cron expression to specify more complex schedules. For example:
+
+* - indicates all possible values for a field</br>
+/ - specifies increments</br>
+, - specifies a list of values</br>
+- - specifies a range of values</br>
+? - specifies no specific value</br>
+
+Here is an example of a cron expression that runs a script every 10 minutes during business hours on weekdays:
+```
+0/10 9-17 * * 1-5
+```
+In this expression, 0/10 means "every 10 minutes", 9-17 means "between 9 AM and 5 PM", and 1-5 means "from Monday to Friday".
+
+Cron expressions can be used not only in Unix, but also in other platforms and programming languages. For example, in Java Spring Boot, you can use cron expressions with the @Scheduled annotation to schedule the execution of a method.
+
+Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
 
