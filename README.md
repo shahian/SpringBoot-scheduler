@@ -35,12 +35,12 @@ Here is an example of a cron expression:
 ```
 Each field in the expression corresponds to a particular time element, as follows:
 
-Minutes (0-59)
-Hours (0-23)
-Day of the month (1-31)
-Month (1-12)
-Day of the week (0-6, where 0 = Sunday)
-The sixth and optional seventh field specifies the year. For example, the following expression runs a script every day at 1:30 AM:
+1. Minutes (0-59)
+2. Hours (0-23)
+3. Day of the month (1-31)
+4. Month (1-12)
+5. Day of the week (0-6, where 0 = Sunday)
+6. The sixth and optional seventh field specifies the year. For example, the following expression runs a script every day at 1:30 AM:
 Note that in order to use @Scheduled, we need to enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation to your configuration class or to your main class.
 ```
 30 1 * * *
